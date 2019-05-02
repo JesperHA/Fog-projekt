@@ -106,8 +106,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="nav nav-pills mx-auto" id="pills-tab" role="tablist">
-      <li class="nav-item" style="padding-left:20px;padding-right:20px;">
+    <ul class="nav nav-pills mx-auto" id="pills-tab" role="tablist"><li class="nav-item" style="padding-left:20px;padding-right:20px;">
         <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" >1. Dimensioner</a>
       </li>
       <li class="nav-item" style="padding-left:20px;padding-right:20px;">

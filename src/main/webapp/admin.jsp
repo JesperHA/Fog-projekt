@@ -26,10 +26,10 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="nav mx-auto">
       <li class="nav-item" style="padding-left:20px;padding-right:20px;">
-        <a class="nav-link active" href="admin.html">Forside</a>
+        <a class="nav-link active" href="admin.jsp">Forside</a>
       </li>
 	  <li class="nav-item" style="padding-left:20px;padding-right:20px;">
-        <a class="nav-link active" href="admin.html">Bestillinger</a>
+        <a class="nav-link active" href="admin.jsp">Bestillinger</a>
       </li>
       <li class="nav-item" style="padding-left:20px;padding-right:20px;">
         <a class="nav-link" href="index.html">Byg Carport</a>
