@@ -99,7 +99,7 @@
 
 <nav class="navbar navbar-default navbar-expand navbar-light bg-light">
   
-  <a class="navbar-brand" href="#" style="padding-left: 4px;"> 
+  <a class="navbar-brand" href="index.jsp" style="padding-left: 4px;">
   <img src="https://www.johannesfog.dk/globalassets/header/logo.png" style="height: 50px;wdith: 50px" class="">
   Carport</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -117,12 +117,12 @@
         <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false" >3. Materiale</a>
       </li>
 	  <li class="nav-item" style="padding-left:20px;padding-right:20px;"> <!-- Denne knap er gemt væk -->
-	    <a class="nav-link" id="pills-afslut-tab"  href="#pills-afslut" role="tab" aria-controls="pills-afslut" aria-selected="false"" data-toggle="pill" hidden="true"></a>
+	    <a class="nav-link" id="pills-afslut-tab"  href="#pills-afslut" role="tab" aria-controls="pills-afslut" aria-selected="false" data-toggle="pill" hidden="true"></a>
 	  </li>
     </ul>
 	<ul class="navbar-nav float-right">
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Afslut</a>
+        <a class="nav-link" href="index.jsp">Afslut</a>
       </li>
 	</ul>
   </div>
