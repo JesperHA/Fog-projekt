@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-body"><img></div>
+                        <div class="card-body"><img style="width:100%;height: 15vw;object-fit: cover;" src="assets\img\garager\enkelt.jpg"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -22,16 +22,16 @@
                         </div>
                         <div class="card-body"><label>Angiv størrelse på carport</label>
                             <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">Enkelt</button></div>
-                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">Dobbelt</button></div>
+                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;">Enkelt</button></div>
+                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;">Dobbelt</button></div>
                             </div><label>Angiv om du ønsker skur.</label>
                             <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">Med skur</button></div>
-                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">Uden skur</button></div>
+                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;">Med skur</button></div>
+                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;">Uden skur</button></div>
                             </div><label>Vælg skurbeklædning</label>
                             <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">En på to</button></div>
-                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;min-height: 100%;">Klinkbeklædning</button></div>
+                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button></div>
+                                <div class="col"><button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button></div>
                             </div><label>Angiv mål</label>
                             <div class="row">
                                 <div class="col"><label>Længde (cm):</label><input type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
