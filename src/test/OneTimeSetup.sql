@@ -1,9 +1,9 @@
 -- There is a schema named "useradmin" with one table: "Users"
 -- The test schema is named "useradminTest"
 -- make a copy of the table
-CREATE TABLE useradminTest.Users LIKE useradmin.Users;
+CREATE TABLE fog_test.users LIKE fog.users;
 -- make an other copy, this time naming it UsersTest
-CREATE TABLE UsersTest LIKE useradminTest.Users;
+CREATE TABLE fog_test LIKE useradminTest.users;
 INSERT INTO `UsersTest` VALUES 
     (1,'jens@somewhere.com','jensen','customer'),
     (2,'ken@somewhere.com','kensen','customer'),
