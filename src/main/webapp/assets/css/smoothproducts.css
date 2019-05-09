@@ -3,21 +3,28 @@ html, body {
   width: 100%;
 }
 
-@media (min-width: 1px){
-  .navbar {
-    max-height: 80px;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+@media (max-width: 992px){
+    .navbar {
+        max-height: 80px;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
 
-  }
-  .clean-navbar .logo {
-    margin-bottom: 15px;
-  }
+    }
+    .clean-navbar .logo {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 992px){
+    .navbarlogo {
+        margin-top: -20px;
+    }
 }
 
 .navbarlogo {
-  max-width: 80px;
+    max-width: 80px;
 }
+
 
 .sp-loading {
   text-align: center;
