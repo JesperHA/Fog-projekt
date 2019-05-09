@@ -11,6 +11,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 
 public class UserMapperTest {
+
+
+
 //    Test date in the UsersTest table
 //    INSERT INTO `UsersTest` VALUES 
 //    (1,'jens@somewhere.com','jensen','customer'),
@@ -21,8 +24,8 @@ public class UserMapperTest {
     private static Connection testConnection;
     private static String USER = "testinguser";
     private static String USERPW = "try1try2tryAgain";
-    private static String DBNAME = "useradminTest";
-    private static String HOST = "46.101.253.149";
+    private static String DBNAME = "fog_test?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false";
+    private static String HOST = "157.230.105.102";
 
     @Before
     public void setUp() {
@@ -38,9 +41,9 @@ public class UserMapperTest {
             }
             // reset test database
             try ( Statement stmt = testConnection.createStatement() ) {
-                stmt.execute( "drop table if exists Users" );
-                stmt.execute( "create table Users like UsersTest" );
-                stmt.execute( "insert into Users select * from UsersTest" );
+                stmt.execute( "drop table if exists users" );
+                stmt.execute( "create table users like users_test" );
+                stmt.execute( "insert into users select * from users_test" );
             }
 
         } catch ( ClassNotFoundException | SQLException ex ) {
@@ -58,7 +61,7 @@ public class UserMapperTest {
     @Test
     public void testLogin01() throws LoginSampleException {
         // Can we log in
-        User user = UserMapper.login( "jens@somewhere.com", "jensen" );
+        User user = UserMapper.login( "jelleholm91@gmail.com", "1234" );
         assertTrue( user != null );
     }
 

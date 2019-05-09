@@ -6,12 +6,17 @@
 package PresentationLayer;
 
 import Exceptions.LoginSampleException;
+import Model.Customer;
+import Model.User;
+
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
 
@@ -67,7 +72,66 @@ public class FrontController extends HttpServlet {
     @Override
     protected void doPost( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
-        processRequest( request, response );
+
+
+        String destination = "index.jsp";
+        String source = request.getParameter("source");
+
+        HttpSession session = request.getSession();
+
+
+        ArrayList<Customer> customer;
+        customer = (ArrayList<Customer>) session.getAttribute("login");
+        if(customer == null){
+            customer = new ArrayList<>();
+        }
+
+
+        switch(source){
+
+            case "login":
+
+                ArrayList<Customer> customerList = FacadeLayer.KundeFacade.getKunderList();
+
+                String email = request.getParameter("email");
+                String password = request.getParameter("password");
+
+
+                for (int i = 0; i < customerList.size(); i++) {
+                    if(customerList.get(i).getEmail().equals(email) && customerList.get(i).getPassword().equals(password)){
+
+                        int customer_id = customerList.get(i).getCustomer_id();
+                        String name = customerList.get(i).getName();
+                        String phone = customerList.get(i).getPhone();
+                        String address = customerList.get(i).getAdress();
+                        String zipcode = customerList.get(i).getZipcode();
+                        String city = customerList.get(i).getCity();
+
+                        customer.add(new Customer(customer_id, name, email, password, phone, address, zipcode, city));
+                        session.setAttribute("login", customer);
+                    }
+
+                }
+
+
+
+
+                destination = "/brugerside.jsp";
+
+
+
+                break;
+
+
+        }
+
+
+
+
+        request.getRequestDispatcher(destination).forward(request,response);
+
+//        processRequest( request, response );
+
     }
 
     /**
