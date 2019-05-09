@@ -56,6 +56,9 @@
     function Enkelt() {
         document.getElementById('Enkeltknap').style.backgroundColor = "#074180";
         document.getElementById('Dobbeltknap').style.backgroundColor = "#007bff";
+
+        document.getElementById('Medskurknap').style.backgroundColor = "#007bff";
+        document.getElementById('Udenskurknap').style.backgroundColor = "#007bff";
         if (variableDobbelt == 1){
             variableDobbelt = 0;
             variableEnkelt = 1;
@@ -68,6 +71,11 @@
     function Dobbelt() {
         document.getElementById('Enkeltknap').style.backgroundColor = "#007bff";
         document.getElementById('Dobbeltknap').style.backgroundColor = "#074180";
+
+        document.getElementById('Medskurknap').style.backgroundColor = "#007bff";
+        document.getElementById('Udenskurknap').style.backgroundColor = "#007bff";
+
+
         if(variableEnkelt == 1){
             variableEnkelt = 0;
             variableDobbelt = 1;
