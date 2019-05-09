@@ -2,7 +2,7 @@
 
 
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/tech/image4.jpg&quot;);color:rgba(9, 162, 255, 0.85);">
+        <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/fogcover.jpg&quot;);color:rgba(9, 162, 255, 0.30);">
             <div class="text">
                 <h2>CPHBusiness Fog Project</h2>
                 <p>Her vil du kunne bestille og få udregnet en carport efter dine præferrencer.</p><button class="btn btn-outline-light btn-lg" type="button">Byg carport</button>
@@ -16,17 +16,20 @@
                     <p>Få lavet en carport efter dine behov, med vores fantastiske online værktøj.</p>
                 </div>
                 <div class="row align-items-center">
-                    <div class="col-md-6"><img class="img-thumbnail" src="assets/img/scenery/image5.jpg"></div>
+                    <div class="col-md-6"><img class="img-thumbnail" src="assets/img/foghus.png"></div>
                     <div class="col-md-6">
-                        <h3>Lorem impsum dolor sit amet</h3>
+                        <h3>Om os</h3>
                         <div class="getting-started-info">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div><button class="btn btn-outline-primary btn-lg" type="button">Join Now</button></div>
+                            <p>Her får du kvalificeret rådgivning til den bedste løsning. Fog hjælper dig med at få overblik og komme i mål med dit byggeprojekt. Lige fra hvad der er godt at vide til vejledning i valg af materialer. </br>
+                                Johannes Fog består af et Bolig & Designhus og ni Trælast & Byggecenter-butikker fordelt i hele Nordsjælland – i Hørsholm, Fredensborg, Kvistgård, Helsinge, Lyngby, Ølstykke, Herlev og Farum. Vi har også en butik mere sydpå i Vordingborg, der også har stor ekspertise i salg af jern, stål og andre metaller. <br>
+                                I trælasten har vi træ og byggematerialer til alle slags opgaver. Vi har et stort udvalg, hvor du kan vælge mellem mange muligheder, både hvad angår størrelser og kvaliteter.<br>
+                            </p>
+                        </div>
                 </div>
             </div>
         </section>
         <section class="clean-block features">
-            <h1>Rush B</h1>
+            <h1>Skaberne bag</h1>
         </section>
         <section class="clean-block about-us">
             <div class="container">
