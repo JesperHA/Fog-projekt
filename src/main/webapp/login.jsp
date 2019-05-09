@@ -30,9 +30,10 @@
                     <h2 class="text-info">Log ind</h2>
                     <p>Velkommen til kundeportalen</p>
                 </div>
-                <form>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Adgangskode</label><input class="form-control" type="password" id="password"></div><button class="btn btn-primary btn-block" type="submit">Log ind</button></form>
+                <form action="FrontController" method="post">
+                    <input type="hidden" name="source" value="login"/>
+                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" name="email" id="email"></div>
+                    <div class="form-group"><label for="password">Adgangskode</label><input class="form-control" type="password" name="password" id="password"></div><button class="btn btn-primary btn-block" type="submit">Log ind</button></form>
             </div>
         </section>
     </main>
