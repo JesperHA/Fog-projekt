@@ -22,12 +22,12 @@
                         </div>
                         <div class="card-body"><label>Angiv størrelse på carport</label>
                             <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
-                                <div class="col"><button class="btn btn-primary" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
+                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
+                                <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
                             </div><label>Angiv om du ønsker skur.</label>
                             <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button></div>
-                                <div class="col"><button class="btn btn-primary" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button></div>
+                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button></div>
+                                <div class="col"><button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button></div>
                             </div><label>Vælg skurbeklædning</label>
                             <div class="row" style="margin-bottom: 35px;">
                                 <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button></div>
@@ -54,6 +54,8 @@
     var variableSkur = 0;
 
     function Enkelt() {
+        document.getElementById('Enkeltknap').style.backgroundColor = "#074180";
+        document.getElementById('Dobbeltknap').style.backgroundColor = "#007bff";
         if (variableDobbelt == 1){
             variableDobbelt = 0;
             variableEnkelt = 1;
@@ -64,6 +66,8 @@
     }
 
     function Dobbelt() {
+        document.getElementById('Enkeltknap').style.backgroundColor = "#007bff";
+        document.getElementById('Dobbeltknap').style.backgroundColor = "#074180";
         if(variableEnkelt == 1){
             variableEnkelt = 0;
             variableDobbelt = 1;
@@ -74,6 +78,9 @@
     }
 
     function MedSkur() {
+        document.getElementById('Medskurknap').style.backgroundColor = "#074180";
+        document.getElementById('Udenskurknap').style.backgroundColor = "#007bff";
+
         if(variableEnkelt == 1){
             variableSkur = 1;
             document.getElementById('PicturePreview').src = "assets/img/garager/enkeltmskur.jpg";
@@ -84,6 +91,8 @@
     }
 
     function UdenSkur() {
+        document.getElementById('Medskurknap').style.backgroundColor = "#007bff";
+        document.getElementById('Udenskurknap').style.backgroundColor = "#074180";
         if(variableEnkelt == 1){
             variableSkur = 0;
             document.getElementById('PicturePreview').src = "assets/img/garager/enkelt.jpg";
