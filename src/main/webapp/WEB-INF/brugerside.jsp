@@ -34,7 +34,7 @@
         </div>
     </nav>
     <main class="page pricing-table-page">
-        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen %bruger%</h1>
+        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen <%out.println(customer.get(0).getName());%></h1>
     </main>
     <div>
         <div class="container" style="margin-bottom: 50px;">
