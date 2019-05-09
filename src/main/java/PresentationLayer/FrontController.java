@@ -11,6 +11,7 @@ import Model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import javax.activation.MimeType;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet( name = "FrontController", urlPatterns = { "/FrontController" } )
 public class FrontController extends HttpServlet {
+
 
     /**
      Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,7 +44,7 @@ public class FrontController extends HttpServlet {
             request.getRequestDispatcher( "/WEB-INF/" + view + ".jsp" ).forward( request, response );
         } catch ( LoginSampleException ex ) {
             request.setAttribute( "error", ex.getMessage() );
-            request.getRequestDispatcher( "bygcarport.jsp" ).forward( request, response );
+            request.getRequestDispatcher( "fejl.jsp" ).forward( request, response );
         }
     }
 
@@ -58,7 +60,28 @@ public class FrontController extends HttpServlet {
     @Override
     protected void doGet( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
-        processRequest( request, response );
+
+        String destination = "index.jsp";
+
+        String source = request.getParameter("source");
+        HttpSession session = request.getSession();
+
+
+        switch(source){
+
+            case "profil":
+                destination = "/WEB-INF/brugerside.jsp";
+                break;
+
+            case "logout":
+                session.removeAttribute("login");
+
+                destination = "/index.jsp";
+                break;
+
+        }
+
+        request.getRequestDispatcher(destination).forward(request,response);
     }
 
     /**
@@ -114,6 +137,7 @@ public class FrontController extends HttpServlet {
                 }
                 destination = "/WEB-INF/brugerside.jsp";
                 break;
+
         }
 
 
