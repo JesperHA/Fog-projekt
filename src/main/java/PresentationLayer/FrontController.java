@@ -112,17 +112,8 @@ public class FrontController extends HttpServlet {
                     }
 
                 }
-
-
-
-
-                destination = "/brugerside.jsp";
-
-
-
+                destination = "/WEB-INF/brugerside.jsp";
                 break;
-
-
         }
 
 

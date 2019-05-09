@@ -1,20 +1,30 @@
+<%@ page import="Model.Customer" %>
+<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
+<%
+
+    ArrayList<Customer> customer = (ArrayList<Customer>) session.getAttribute("login");
+
+
+%>
+
+
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Pricing - Brand</title>
-    <link rel="stylesheet" href="../../../../FOG%20HTML/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="../../../../FOG%20HTML/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="../assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="../../../../FOG%20HTML/assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="../assets/css/smoothproducts.css">
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><img src="../../../../FOG%20HTML/assets/img/fog_logo.png" style="padding-left: 0;padding-right: 15px;"><a class="navbar-brand logo" href="#">Fog Carport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img src="../assets/img/fog_logo.png" style="padding-left: 0;padding-right: 15px;"><a class="navbar-brand logo" href="#">Fog Carport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
@@ -35,16 +45,19 @@
                             <h4 class="card-title">Konto</h4>
                             <h6 class="text-muted card-subtitle mb-2">Her kan du se dine kontooplysninger</h6>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Kundenummer: %nummer%</label></div>
+                                <div class="col"><label class="col-form-label">Kundenummer: <%out.println(customer.get(0).getCustomer_id());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Navn: %navn%</label></div>
+                                <div class="col"><label class="col-form-label">Navn: <%out.println(customer.get(0).getName());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Email: %email%</label></div>
+                                <div class="col"><label class="col-form-label">Email: <%out.println(customer.get(0).getEmail());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Adresse: %adresse%</label></div>
+                                <div class="col"><label class="col-form-label">Telefon: <%out.println(customer.get(0).getPhone());%></label></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><label class="col-form-label">Adresse: <%out.println(customer.get(0).getAdress()); %> - <%out.println(customer.get(0).getZipcode());%> - <%out.println(customer.get(0).getCity());%></label></div>
                             </div>
                         </div>
                     </div>
