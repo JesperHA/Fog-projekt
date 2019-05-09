@@ -24,7 +24,7 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><img src="../assets/img/fog_logo.png" style="padding-left: 0;padding-right: 15px;"><a class="navbar-brand logo" href="#">Fog Carport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img src="../assets/img/fog_logo.png" style="padding-left: 0;padding-right: 15px;"><a class="navbar-brand logo" href="../index.jsp">Fog Carport</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
@@ -34,7 +34,7 @@
         </div>
     </nav>
     <main class="page pricing-table-page">
-        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen <%out.println(customer.get(0).getName());%></h1>
+        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen <%out.println(customer.get(0).getName());%>!</h1>
     </main>
     <div>
         <div class="container" style="margin-bottom: 50px;">
@@ -44,6 +44,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Konto</h4>
                             <h6 class="text-muted card-subtitle mb-2">Her kan du se dine kontooplysninger</h6>
+                            <hr>
                             <div class="row">
                                 <div class="col"><label class="col-form-label">Kundenummer: <%out.println(customer.get(0).getCustomer_id());%></label></div>
                             </div>
@@ -87,9 +88,9 @@
                 <div class="col-sm-3">
                     <h5>Navigation</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Medarbejder Login</a></li>
-                        <li><a href="#">Kundeportal</a></li>
+                        <li><a href="../index.jsp">Startside</a></li>
+                        <li><a href="../login.jsp">Login Portal</a></li>
+                        <li><a href="#">Byg Carport</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -97,18 +98,18 @@
                     <p style="color: rgb(255,255,255);">Udviklet af 2. Semester holdet Rush B.</p>
                 </div>
                 <div class="col-sm-3"></div>
-                <div class="col-sm-3"><img src="../../../../FOG%20HTML/assets/img/fog_logo.png" style="margin-top: 15px;margin-right: 20px;margin-left: 50px;"></div>
+                <div class="col-sm-3"><img src="../assets/img/fog_logo.png" style="margin-top: 15px;margin-right: 20px;margin-left: 50px;"></div>
             </div>
         </div>
         <div class="footer-copyright">
             <p>© 2019 Copyright. Alle rettigheder forbeholdes Rush B.</p>
         </div>
     </footer>
-    <script src="../../../../FOG%20HTML/assets/js/jquery.min.js"></script>
-    <script src="../../../../FOG%20HTML/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="../../../../FOG%20HTML/assets/js/smoothproducts.min.js"></script>
-    <script src="../../../../FOG%20HTML/assets/js/theme.js"></script>
+    <script src="../assets/js/smoothproducts.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
 </body>
 
 </html>
