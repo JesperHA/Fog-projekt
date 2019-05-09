@@ -46,19 +46,19 @@
                             <h6 class="text-muted card-subtitle mb-2">Her kan du se dine kontooplysninger</h6>
                             <hr>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Kundenummer: <%out.println(customer.get(0).getCustomer_id());%></label></div>
+                                <div class="col"><label class="col-form-label"><b>Kundenummer: </b><%out.println(customer.get(0).getCustomer_id());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Navn: <%out.println(customer.get(0).getName());%></label></div>
+                                <div class="col"><label class="col-form-label"><b>Navn: </b><%out.println(customer.get(0).getName());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Email: <%out.println(customer.get(0).getEmail());%></label></div>
+                                <div class="col"><label class="col-form-label"><b>Email: </b><%out.println(customer.get(0).getEmail());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Telefon: <%out.println(customer.get(0).getPhone());%></label></div>
+                                <div class="col"><label class="col-form-label"><b>Telefon: </b><%out.println(customer.get(0).getPhone());%></label></div>
                             </div>
                             <div class="row">
-                                <div class="col"><label class="col-form-label">Adresse: <%out.println(customer.get(0).getAdress()); %> - <%out.println(customer.get(0).getZipcode());%> - <%out.println(customer.get(0).getCity());%></label></div>
+                                <div class="col"><label class="col-form-label"><b>Adresse: </b><%out.println(customer.get(0).getAdress()); %> - <%out.println(customer.get(0).getZipcode());%> - <%out.println(customer.get(0).getCity());%></label></div>
                             </div>
                         </div>
                     </div>
