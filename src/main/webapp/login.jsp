@@ -53,14 +53,15 @@
 						</div>
 					 </div>
 						<div class="card-body">
-							<form>
+							<form action="FrontController" method="post">
+								<input type="hidden" name="source" value="login"/>
 							  <div class="form-group">
 								<label for="exampleInputEmail1">Email</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
+								<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required>
 							  </div>
 							  <div class="form-group">
 								<label for="exampleInputPassword1">Kodeord</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="*******" required>
+								<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="*******" required>
 							  </div>
 							  <center>
 							  <button type="submit" class="btn btn-primary">Login</button>
