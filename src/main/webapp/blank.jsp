@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Brand</title>
+    <title>Features - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -19,32 +19,39 @@
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.jsp">Startside</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="login.jsp">login portal</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="WEB-INF/brugerside.jsp">login portal</a></li>
                 </ul><button class="btn btn-primary" type="button">Byg Carport</button></div>
         </div>
     </nav>
-    <main class="page login-page">
-        <section class="clean-block clean-form dark">
-            <div class="container" style="margin-top: 50px;">
-                <div class="block-heading">
-                    <h2 class="text-info">Log ind</h2>
-                    <p>Velkommen til kundeportalen</p>
-                </div>
-                <form>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Adgangskode</label><input class="form-control" type="password" id="password"></div><button class="btn btn-primary btn-block" type="submit">Log ind</button></form>
-            </div>
+    <main class="page">
+        <section class="clean-block features">
+            <div class="card"></div>
         </section>
     </main>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body" style="margin-bottom: 20px;">
+                            <h4 class="card-title">Dette er titlen</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
+                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <h5>Navigation</h5>
                     <ul>
-                        <li><a href="index.jsp">Startside</a></li>
-                        <li><a href="login.jsp">Login portal</a></li>
-                        <li><a href="#">Byg Carport</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Medarbejder Login</a></li>
+                        <li><a href="#">Kundeportal</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
