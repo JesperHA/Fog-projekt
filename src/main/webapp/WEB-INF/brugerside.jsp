@@ -1,4 +1,4 @@
-<%@ page import="Model.Customer" %>
+﻿<%@ page import="Model.Customer" %>
 <%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <%
