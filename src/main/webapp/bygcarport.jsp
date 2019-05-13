@@ -54,16 +54,22 @@
                                     </div>
                                 </div>
 
+
+                                <form action="FrontController" method="post">
+
                                 <label><b>Angiv mål på carport</b></label>
                                 <div class="row">
-                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
+                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" name="length" style="min-width: 100%;margin-bottom: 15px;"></div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" name="width" style="min-width: 100%;"></div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" name="height" style="min-width: 100%;"></div>
                                 </div>
+                                    <button class="btn btn-success" name="source" value="generate_SVG" type="submit" style="float: right;">Print SVG</button>
+                                </form>
+
 
                                 <div id="skurCM" style="display:none">
                                     <label><b>Angiv mål på skur</b></label>
@@ -200,6 +206,7 @@
 
                                 <button class="btn btn-light" type="button" style="float: left;" onclick="getElementById('taget-tab').click()">Tilbage</button>
                                 <button class="btn btn-success" type="button" style="float: right;">Bestil</button>
+
                                 <br>
                             </div>
 
