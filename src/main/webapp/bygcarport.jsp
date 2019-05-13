@@ -14,69 +14,195 @@
                     <div class="card"></div>
                     <div class="card">
                         <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-item"><a class="nav-link active" href="#carport">Carport</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#taget">Taget</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#afslut">Bekræftelse</a></li>
+                            <ul class="nav nav-tabs card-header-tabs" id="tabs" role="tablist">
+                                <li class="nav-item"><a class="nav-link active" id="carport-tab" data-toggle="tab" href="#carport">Carport</a></li>
+                                <li class="nav-item"><a class="nav-link" id="taget-tab" data-toggle="tab" href="#taget">Taget</a></li>
+                                <li class="nav-item"><a class="nav-link" id="afslut-tab" data-toggle="tab" href="#afslut">Bekræftelse</a></li>
                             </ul>
                         </div>
-                        <div class="card-body">
-                            <label><b>Angiv størrelse på carport</b></label>
-                            <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
-                                <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
-                            </div>
 
-                            <label><b>Angiv om du ønsker skur.</b></label>
-                            <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xl-6" style="min-height: 50px;">
-                                    <button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
-                                </div>
-                                <div class="col">
-                                    <button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
-                                </div>
-                            </div>
 
-                            <div id="skurCover" style="display:none">
-                                <label><b>Vælg skurbeklædning</b></label>
+
+                        <div class="tab-content" id="tabContent">
+                            <!-- Carport -->
+                            <div class="card-body tab-pane fade show active" id="carport" role="tabpanel" aria-labelledby="carport-tab">
+                                <label><b>Angiv størrelse på carport</b></label>
+                                <div class="row" style="margin-bottom: 35px;">
+                                    <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
+                                    <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
+                                </div>
+
+                                <label><b>Angiv om du ønsker skur.</b></label>
                                 <div class="row" style="margin-bottom: 35px;">
                                     <div class="col-xl-6" style="min-height: 50px;">
-                                        <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                        <button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
                                     </div>
                                     <div class="col">
-                                        <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                        <button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
                                     </div>
                                 </div>
-                            </div>
 
-                            <label><b>Angiv mål på carport</b></label>
-                            <div class="row">
-                                <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
-                            </div>
-                            <div class="row" style="margin-bottom: 15px;">
-                                <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
-                            </div>
-                            <div class="row" style="margin-bottom: 15px;">
-                                <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
-                            </div>
-
-                            <div id="skurCM" style="display:none">
-                                <label><b>Angiv mål på skur</b></label>
-                                <div class="row">
-                                    <div class="col"><label>Længde (cm):</label>
-                                        <input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;">
+                                <div id="skurCover" style="display:none">
+                                    <label><b>Vælg skurbeklædning</b></label>
+                                    <div class="row" style="margin-bottom: 35px;">
+                                        <div class="col-xl-6" style="min-height: 50px;">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                        </div>
                                     </div>
+                                </div>
+
+                                <label><b>Angiv mål på carport</b></label>
+                                <div class="row">
+                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Bredde (cm):</label>
-                                        <input class="form-control" type="text" style="min-width: 100%;">
+                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+
+                                <div id="skurCM" style="display:none">
+                                    <label><b>Angiv mål på skur</b></label>
+                                    <div class="row">
+                                        <div class="col"><label>Længde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col"><label>Bredde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;">
+                                        </div>
                                     </div>
                                 </div>
+
+                                <button class="btn btn-primary" type="button" style="float: right;" onclick="getElementById('taget-tab').click()">Næste</button>
+                                <br>
                             </div>
 
+                            <!-- Taget -->
+                            <div class="card-body tab-pane fade" id="taget" role="tabpanel" aria-labelledby="taget-tab">
+                                <label><b>Angiv taget på carporten</b></label>
+                                <div class="row" style="margin-bottom: 35px;">
+                                    <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
+                                    <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
+                                </div>
 
+                                <label><b>Angiv om du ønsker skur.</b></label>
+                                <div class="row" style="margin-bottom: 35px;">
+                                    <div class="col-xl-6" style="min-height: 50px;">
+                                        <button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
+                                    </div>
+                                </div>
 
-                            <button class="btn btn-primary" type="button" style="float: right;">Næste</button>
+                                <div id="skurCover" style="display:none">
+                                    <label><b>Vælg skurbeklædning</b></label>
+                                    <div class="row" style="margin-bottom: 35px;">
+                                        <div class="col-xl-6" style="min-height: 50px;">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label><b>Angiv mål på carport</b></label>
+                                <div class="row">
+                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+
+                                <div id="skurCM" style="display:none">
+                                    <label><b>Angiv mål på skur</b></label>
+                                    <div class="row">
+                                        <div class="col"><label>Længde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col"><label>Bredde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-light" type="button" style="float: left;" onclick="getElementById('carport-tab').click()">Tilbage</button>
+                                <button class="btn btn-primary" type="button" style="float: right;" onclick="getElementById('afslut-tab').click()">Næste</button>
+                                <br>
+                            </div>
+
+                            <!-- Afslut -->
+                            <div class="card-body tab-pane fade" id="afslut" role="tabpanel" aria-labelledby="afslut-tab">
+                                <label><b>Angiv afslut på carporten</b></label>
+                                <div class="row" style="margin-bottom: 35px;">
+                                    <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
+                                    <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
+                                </div>
+
+                                <label><b>Angiv om du ønsker skur.</b></label>
+                                <div class="row" style="margin-bottom: 35px;">
+                                    <div class="col-xl-6" style="min-height: 50px;">
+                                        <button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
+                                    </div>
+                                </div>
+
+                                <div id="skurCover" style="display:none">
+                                    <label><b>Vælg skurbeklædning</b></label>
+                                    <div class="row" style="margin-bottom: 35px;">
+                                        <div class="col-xl-6" style="min-height: 50px;">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label><b>Angiv mål på carport</b></label>
+                                <div class="row">
+                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+                                <div class="row" style="margin-bottom: 15px;">
+                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                </div>
+
+                                <div id="skurCM" style="display:none">
+                                    <label><b>Angiv mål på skur</b></label>
+                                    <div class="row">
+                                        <div class="col"><label>Længde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 15px;">
+                                        <div class="col"><label>Bredde (cm):</label>
+                                            <input class="form-control" type="text" style="min-width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-light" type="button" style="float: left;" onclick="getElementById('taget-tab').click()">Tilbage</button>
+                                <button class="btn btn-success" type="button" style="float: right;">Bestil</button>
+                                <br>
+                            </div>
+
                         </div>
                     </div>
                 </div>
