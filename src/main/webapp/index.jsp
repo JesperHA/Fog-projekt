@@ -5,7 +5,7 @@
         <section class="clean-block clean-hero" style="background-image:url(&quot;assets/img/fogcover.jpg&quot;);color:rgba(9, 162, 255, 0.30);">
             <div class="text">
                 <h2>CPHBusiness Fog Project</h2>
-                <p>Her vil du kunne bestille og få udregnet en carport efter dine præferrencer.</p><button class="btn btn-outline-light btn-lg" type="button">Byg carport</button>
+                <p>Her vil du kunne bestille og få udregnet en carport efter dine præferrencer.</p><button class="btn btn-outline-light btn-lg" type="button" onclick="window.location.href = 'bygcarport.jsp';">Byg carport</button>
                 <div></div>
             </div>
         </section>

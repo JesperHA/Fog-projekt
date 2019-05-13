@@ -15,9 +15,9 @@
                     <div class="card">
                         <div class="card-header">
                             <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-item"><a class="nav-link active" href="#">Carport</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Taget</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Bekræftelse</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#carport">Carport</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#taget">Taget</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#afslut">Bekræftelse</a></li>
                             </ul>
                         </div>
                         <div class="card-body"><label>Angiv størrelse på carport</label>
