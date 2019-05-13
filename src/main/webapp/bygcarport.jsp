@@ -28,6 +28,9 @@
                             <div class="tab-content" id="tabContent">
                                 <!-- Carport -->
 
+                                <input class="form-control" type="hidden" name="size" id="size" value="0" />
+                                <input class="form-control" type="hidden" name="shed" id="shed" value="0" />
+                                <input class="form-control" type="hidden" name="shedtype" id="shedtype" value="0" />
 
                             <div class="card-body tab-pane fade show active" id="carport" role="tabpanel" aria-labelledby="carport-tab">
                                 <label><b>Angiv størrelse på carport</b></label>
@@ -63,13 +66,13 @@
 
                                 <label><b>Angiv mål på carport</b></label>
                                 <div class="row">
-                                    <div class="col"><label>Længde (cm):</label><input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
+                                    <div class="col"><label>Længde (cm):</label><input class="form-control" name="length" type="text" style="min-width: 100%;margin-bottom: 15px;"></div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                    <div class="col"><label>Bredde (cm):</label><input class="form-control" name="width" type="text" style="min-width: 100%;"></div>
                                 </div>
                                 <div class="row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
+                                    <div class="col"><label>Højde (cm):</label><input class="form-control" name="height" type="text" style="min-width: 100%;"></div>
                                 </div>
 
 
@@ -77,12 +80,12 @@
                                     <label><b>Angiv mål på skur</b></label>
                                     <div class="row">
                                         <div class="col"><label>Længde (cm):</label>
-                                            <input class="form-control" type="text" style="min-width: 100%;margin-bottom: 15px;">
+                                            <input class="form-control" name="shed_length" type="text" style="min-width: 100%;margin-bottom: 15px;">
                                         </div>
                                     </div>
                                     <div class="row" style="margin-bottom: 15px;">
                                         <div class="col"><label>Bredde (cm):</label>
-                                            <input class="form-control" type="text" style="min-width: 100%;">
+                                            <input class="form-control" name="shed_width" type="text" style="min-width: 100%;">
                                         </div>
                                     </div>
                                 </div>
@@ -241,6 +244,7 @@
         }else{
             variableEnkelt = 1;
         }
+        document.getElementById('size').value = "0";
         document.getElementById('PicturePreview').src = "assets/img/garager/enkelt.jpg";
     }
 
@@ -258,6 +262,7 @@
         }else{
             variableDobbelt = 1;
         }
+        document.getElementById('size').value = "1";
         document.getElementById('PicturePreview').src = "assets/img/garager/dobbelt.jpg";
     }
 
@@ -276,6 +281,7 @@
             variableSkur = 1;
             document.getElementById('PicturePreview').src = "assets/img/garager/dobbeltmskur.jpg";
         }
+        document.getElementById('shed').value = "1";
     }
 
     function UdenSkur() {
@@ -291,6 +297,7 @@
         }else{
             document.getElementById('PicturePreview').src = "assets/img/garager/dobbelt.jpg";
         }
+        document.getElementById('shed').value = "0";
     }
 
     function EnPåTo() {
@@ -302,6 +309,7 @@
         }else{
             variableKlink = 1;
         }
+        document.getElementById('shedtype').value = "1";
 
     }
 
@@ -314,6 +322,7 @@
         }else{
             variableEnPåTo = 1;
         }
+        document.getElementById('shedtype').value = "2";
 
     }
 
