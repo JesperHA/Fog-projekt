@@ -46,10 +46,10 @@
                                     <label><b>Vælg skurbeklædning</b></label>
                                     <div class="row" style="margin-bottom: 35px;">
                                         <div class="col-xl-6" style="min-height: 50px;">
-                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                            <button class="btn btn-primary" id="EnPåToKnap" onclick="EnPåTo()" type="button" style="min-width: 100%;">En på to</button>
                                         </div>
                                         <div class="col">
-                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                            <button class="btn btn-primary" id="KlinkKnap" onclick="Klink()" type="button" style="min-width: 100%;">Klinkbeklædning</button>
                                         </div>
                                     </div>
                                 </div>
@@ -89,21 +89,24 @@
                                 <br>
                             </div>
 
+
+
+
                             <!-- Taget -->
                             <div class="card-body tab-pane fade" id="taget" role="tabpanel" aria-labelledby="taget-tab">
                                 <label><b>Angiv taget på carporten</b></label>
                                 <div class="row" style="margin-bottom: 35px;">
-                                    <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="Enkeltknap" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
-                                    <div class="col"><button class="btn btn-primary" id="Dobbeltknap" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
+                                    <div class="col-xl-6" style="min-height: 50px;"><button class="btn btn-primary" id="" type="button" onclick="Enkelt()" style="min-width: 100%;">Enkelt</button></div>
+                                    <div class="col"><button class="btn btn-primary" id="" type="button" onclick="Dobbelt()" style="min-width: 100%;">Dobbelt</button></div>
                                 </div>
 
                                 <label><b>Angiv om du ønsker skur.</b></label>
                                 <div class="row" style="margin-bottom: 35px;">
                                     <div class="col-xl-6" style="min-height: 50px;">
-                                        <button class="btn btn-primary" id="Medskurknap" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
+                                        <button class="btn btn-primary" id="" type="button" onclick="MedSkur()" style="min-width: 100%;">Med skur</button>
                                     </div>
                                     <div class="col">
-                                        <button class="btn btn-primary" id="Udenskurknap" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
+                                        <button class="btn btn-primary" id="" type="button" onclick="UdenSkur()" style="min-width: 100%;">Uden skur</button>
                                     </div>
                                 </div>
 
@@ -111,10 +114,10 @@
                                     <label><b>Vælg skurbeklædning</b></label>
                                     <div class="row" style="margin-bottom: 35px;">
                                         <div class="col-xl-6" style="min-height: 50px;">
-                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">En på to</button>
+                                            <button class="btn btn-primary" id="" onclick="EnPåTo" type="button" style="min-width: 100%;">En på to</button>
                                         </div>
                                         <div class="col">
-                                            <button class="btn btn-primary" type="button" style="min-width: 100%;">Klinkbeklædning</button>
+                                            <button class="btn btn-primary" id="" onclick="Klink" type="button" style="min-width: 100%;">Klinkbeklædning</button>
                                         </div>
                                     </div>
                                 </div>
@@ -221,6 +224,8 @@
     var variableEnkelt = 0;
     var variableDobbelt = 0;
     var variableSkur = 0;
+    var variableEnPåTo = 0;
+    var variableKlink = 0;
 
     function Enkelt() {
         document.getElementById('Enkeltknap').style.backgroundColor = "#074180";
@@ -284,6 +289,30 @@
         }else{
             document.getElementById('PicturePreview').src = "assets/img/garager/dobbelt.jpg";
         }
+    }
+
+    function EnPåTo() {
+        document.getElementById('EnPåToKnap').style.backgroundColor = "#074180";
+        document.getElementById('KlinkKnap').style.backgroundColor = "#007bff";
+        if (variableEnPåTo == 1){
+            variableKlink = 0;
+            variableEnPåTo = 1;
+        }else{
+            variableKlink = 1;
+        }
+
+    }
+
+    function Klink() {
+        document.getElementById('EnPåToKnap').style.backgroundColor = "#007bff";
+        document.getElementById('KlinkKnap').style.backgroundColor = "#074180";
+        if (variableKlink == 1){
+            variableEnPåTo = 0;
+            variableKlink = 1;
+        }else{
+            variableEnPåTo = 1;
+        }
+
     }
 
 </script>
