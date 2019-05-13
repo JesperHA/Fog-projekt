@@ -56,7 +56,7 @@
                         <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/mathiasface.jpg" style="width:253px!important;height:253px!important;">
                             <div class="card-body info">
                                 <h4 class="card-title">Mathias Gubben</h4>
-                                <p class="card-text">Programmør aka Lil' Brain</p>
+                                <p class="card-text">Programmør</p>
                                 <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
                             </div>
                         </div>
