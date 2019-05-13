@@ -4,19 +4,22 @@ public class SVG {
 
     public String createSVG (int height, int width, int length) {
 
+        int viewBox_width = width + 200;
+        int viewBox_length = length + 200;
+
         String start_SVG = "<?xml version='1.0'?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>\n" +
                 "\n" +
-                "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='100%' viewBox=' 0 0 830 650' preserveAspectRatio='xMinYMin'>\n" +
+                "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='100%' viewBox=' 0 0 800 800' preserveAspectRatio='xMinYMin'>\n" +
                 "\n" +
-                "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='60' width='"+width+"' height='"+height+"' viewBox=' 0 0 "+height+" "+width+"' preserveAspectRatio='xMinYMin'>";
+                "<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='60' width='"+width+"' height='"+length+"' viewBox=' 0 0 "+length+" "+width+"' preserveAspectRatio='xMinYMin'>";
 
         int start_rem = 35;
-        double end_rem = height - 39.5;
-        int vindkryds_y = height - 35;
+        double end_rem = length - 39.5;
+        int vindkryds_y = length - 35;
 
         String body_SVG = "<!-- Ramme -->\n" +
                 "\n" +
-                "    <rect x='0' y='0' width='"+width+"' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='0' y='0' width='"+width+"' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
                 "\n" +
                 "    <!-- Remme -->\n" +
                 "    <rect x='0' y='"+start_rem+"' width='"+width+"' height='4.5' style='stroke:black; fill: white;'/>\n" +
@@ -32,21 +35,21 @@ public class SVG {
                 "\n" +
                 "\n" +
                 "    <!-- Spær -->\n" +
-                "    <rect x='0' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='55' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='110' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='165' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='220' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='275' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='330' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='385' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='440' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='495' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='550' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='605' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='660' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='715' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/>\n" +
-                "    <rect x='770' y='0' width='4.5' height='"+height+"' style='stroke:black; fill: white;'/></svg>";
+                "    <rect x='0' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='55' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='110' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='165' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='220' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='275' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='330' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='385' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='440' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='495' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='550' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='605' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='660' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='715' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/>\n" +
+                "    <rect x='770' y='0' width='4.5' height='"+length+"' style='stroke:black; fill: white;'/></svg>";
 
         String function_SVG = " <defs>\n" +
                 "    <marker id='beginArrow' \n" +
@@ -67,9 +70,9 @@ public class SVG {
                 "\tmarker-start: url(#beginArrow);\n" +
                 "   marker-end: url(#endArrow);'/>\n" +
                 "\n" +
-                "   <text transform='rotate(-90 15, 300)' x='15' y='300'>600 cm </text>\n" +
+                "   <text transform='rotate(-90 15, 300)' x='15' y='300'>"+height+" cm </text>\n" +
                 "\n" +
-                "<line x1='40'  y1='35' x2='40'   y2='565' \n" +
+                "<line x1='40'  y1='35' x2='40' y2='"+height+"' \n" +
                 "\tstyle='stroke:black;\n" +
                 "\tmarker-start: url(#beginArrow);\n" +
                 "   marker-end: url(#endArrow);'/>\n" +
@@ -78,6 +81,9 @@ public class SVG {
                 "\tstyle='stroke:black;\n" +
                 "\tmarker-start: url(#beginArrow);\n" +
                 "   marker-end: url(#endArrow);'/>\n" +
+                "\n" +
+                "   <text transform='rotate(15, 300)' x='15' y='300'>"+length+" cm </text>\n" +
+                "\n" +
                 "</svg>\n";
 
         String return_SVG = start_SVG + body_SVG + function_SVG;

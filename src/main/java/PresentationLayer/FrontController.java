@@ -97,7 +97,6 @@ public class FrontController extends HttpServlet {
     protected void doPost( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
 
-
         String destination = "index.jsp";
         String source = request.getParameter("source");
 
@@ -110,11 +109,8 @@ public class FrontController extends HttpServlet {
             customer = new ArrayList<>();
         }
 
-
         switch(source){
-
             case "login":
-
                 ArrayList<Customer> customerList = FacadeLayer.KundeFacade.getKunderList();
 
                 String email = request.getParameter("email");
@@ -140,16 +136,13 @@ public class FrontController extends HttpServlet {
                 break;
 
             case "generate_SVG":
-                String height = request.getParameter("height");
-                String width = request.getParameter("width");
-                String length = request.getParameter("length");
+
+                int height = Integer.parseInt(request.getParameter("height"));
+                int width = Integer.parseInt(request.getParameter("width"));
+                int length = Integer.parseInt(request.getParameter("length"));
                 SVG svg = new SVG();
 
-                int height_int = Integer.parseInt(height);
-                int width_int = Integer.parseInt(width);
-                int length_int = Integer.parseInt(length);
-
-                session.setAttribute("svg", svg.createSVG(400,500,300));
+                session.setAttribute("svg", svg.createSVG(height,width,length));
 
                 destination = "printDrawing.jsp";
                 break;
