@@ -27,6 +27,10 @@
                         <input class="form-control item" type="text" name="by" id="by" readonly>
                     </div>
                     <button class="btn btn-primary btn-block" type="submit">Registrér</button>
+
+                    <div class="block-heading" style="padding-top:25px; margin-bottom:0 !important;">
+                        <a href="login.jsp" style="text-align:center;">Allerede bruger? Login her</a>
+                    </div>
                 </form>
             </div>
         </section>

@@ -10,7 +10,7 @@
                     <input type="hidden" name="source" value="login"/>
                     <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" name="email" id="email"></div>
                     <div class="form-group"><label for="password">Adgangskode</label><input class="form-control" type="password" name="password" id="password"></div><button class="btn btn-primary btn-block" type="submit">Log ind</button>
-                    <div><a href="registration.jsp" style="text-align:center;margin:auto;padding:0;">Opret en bruger her</a></div>
+                    <div class="block-heading" style="padding-top:25px; margin-bottom:0 !important;"><a href="registration.jsp" style="text-align:center;">Opret en bruger her</a></div>
                 </form>
             </div>
         </section>
