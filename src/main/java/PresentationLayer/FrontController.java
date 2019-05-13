@@ -137,12 +137,11 @@ public class FrontController extends HttpServlet {
 
             case "generate_SVG":
 
-                int height = Integer.parseInt(request.getParameter("height"));
                 int width = Integer.parseInt(request.getParameter("width"));
                 int length = Integer.parseInt(request.getParameter("length"));
                 SVG svg = new SVG();
 
-                session.setAttribute("svg", svg.createSVG(height,width,length));
+                session.setAttribute("svg", svg.createSVG(width,length));
 
                 destination = "printDrawing.jsp";
                 break;
