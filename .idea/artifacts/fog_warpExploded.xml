@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-war" name="fog_warpExploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/fog_warpExploded</output-path>
-    <root id="root" />
-  </artifact>
-</component>
