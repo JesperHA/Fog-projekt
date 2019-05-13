@@ -8,6 +8,7 @@ package PresentationLayer;
 import Exceptions.LoginSampleException;
 import Model.Customer;
 import Model.User;
+import FunctionLayer.SVG;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -138,6 +139,20 @@ public class FrontController extends HttpServlet {
                 destination = "/WEB-INF/brugerside.jsp";
                 break;
 
+            case "generate_SVG":
+                String height = request.getParameter("height");
+                String width = request.getParameter("width");
+                String length = request.getParameter("length");
+                SVG svg = new SVG();
+
+                int height_int = Integer.parseInt(height);
+                int width_int = Integer.parseInt(width);
+                int length_int = Integer.parseInt(length);
+
+                session.setAttribute("svg", svg.createSVG(400,500,300));
+
+                destination = "printDrawing.jsp";
+                break;
         }
 
 
