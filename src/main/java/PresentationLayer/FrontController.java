@@ -7,6 +7,7 @@ package PresentationLayer;
 
 import DBAccess.CustomerMapper;
 import Exceptions.LoginSampleException;
+import FunctionLayer.SVG;
 import Model.Customer;
 import Model.User;
 
@@ -79,6 +80,18 @@ public class FrontController extends HttpServlet {
 
                 destination = "/index.jsp";
                 break;
+            case "admin":
+                int role = 0;
+
+                ArrayList<Customer> login = (ArrayList<Customer>) session.getAttribute("login");
+                role = login.get(0).getRole();
+
+                if (login != null && role == 1) {
+                    destination = "/WEB-INF/admin.jsp";
+                } else {
+                    destination = "index.jsp";
+                }
+                break;
 
         }
 
@@ -120,6 +133,7 @@ public class FrontController extends HttpServlet {
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
 
+
                 for (int i = 0; i < customerList.size(); i++) {
                     if(customerList.get(i).getEmail().equals(email) && customerList.get(i).getPassword().equals(password)){
 
@@ -135,13 +149,10 @@ public class FrontController extends HttpServlet {
                     }
 
                 }
-
                 destination = "/WEB-INF/brugerside.jsp";
                 break;
 
             case "register":
-
-                System.out.println("Opretter kunden ...");
 
                 String customer_name = request.getParameter("name");
                 String customer_email = request.getParameter("email");
@@ -155,11 +166,24 @@ public class FrontController extends HttpServlet {
 
                 try {
                     CustomerMapper.createCustomer(createCustomer);
-                    System.out.println("Kunden er oprettet!");
+
+                    destination = "/login.jsp";
+
                 } catch (LoginSampleException ex) {
                     ex.printStackTrace();
                 }
 
+                break;
+
+            case "generate_SVG":
+
+                int width = Integer.parseInt(request.getParameter("width"));
+                int length = Integer.parseInt(request.getParameter("length"));
+                SVG svg = new SVG();
+
+                session.setAttribute("svg", svg.createSVG(width,length));
+
+                destination = "printDrawing.jsp";
                 break;
 
         }
