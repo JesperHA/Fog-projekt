@@ -22,9 +22,13 @@
                         </div>
 
 
+                        <form action="MaterialCalculator" method="post">
+                            <input type="hidden" name="source" value="bygcarport"/>
 
-                        <div class="tab-content" id="tabContent">
-                            <!-- Carport -->
+                            <div class="tab-content" id="tabContent">
+                                <!-- Carport -->
+
+
                             <div class="card-body tab-pane fade show active" id="carport" role="tabpanel" aria-labelledby="carport-tab">
                                 <label><b>Angiv størrelse på carport</b></label>
                                 <div class="row" style="margin-bottom: 35px;">
@@ -55,7 +59,7 @@
                                 </div>
 
 
-                                <form action="FrontController" method="post">
+
 
                                 <label><b>Angiv mål på carport</b></label>
                                 <div class="row">
@@ -67,8 +71,6 @@
                                 <div class="row" style="margin-bottom: 15px;">
                                     <div class="col"><label>Højde (cm):</label><input class="form-control" type="text" style="min-width: 100%;"></div>
                                 </div>
-                                    <button class="btn btn-success" name="source" value="generate_SVG" type="submit" style="float: right;">Print SVG</button>
-                                </form>
 
 
                                 <div id="skurCM" style="display:none">
@@ -208,11 +210,12 @@
                                 </div>
 
                                 <button class="btn btn-light" type="button" style="float: left;" onclick="getElementById('taget-tab').click()">Tilbage</button>
-                                <button class="btn btn-success" type="button" style="float: right;">Bestil</button>
+                                <button class="btn btn-success" type="submit" style="float: right;">Bestil</button>
                                 <br>
                             </div>
 
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
