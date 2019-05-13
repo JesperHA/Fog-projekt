@@ -12,7 +12,7 @@
 
 
     <main class="page pricing-table-page">
-        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen <%out.println(customer.get(0).getName());%>!</h1>
+        <h1 style="margin-bottom: 50px;margin-top: 120px;">Velkommen til admin panelet, <%out.println(customer.get(0).getName());%>!</h1>
     </main>
     <div>
         <div class="container" style="margin-bottom: 50px;">
@@ -21,7 +21,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Konto</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Her kan du se dine kontooplysninger</h6>
+                            <h6 class="text-muted card-subtitle mb-2">Her kan du se admin funktioner</h6>
                             <hr>
                             <div class="row">
                                 <div class="col"><label class="col-form-label"><b>Kundenummer: </b><%out.println(customer.get(0).getCustomer_id());%></label></div>

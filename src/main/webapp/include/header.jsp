@@ -1,7 +1,14 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="Model.Customer" %>
 
-<% ArrayList<Customer> login = (ArrayList<Customer>) session.getAttribute("login"); %>
+<%
+    int role = 0;
+
+    ArrayList<Customer> login = (ArrayList<Customer>) session.getAttribute("login");
+    if (login != null) {
+        role = login.get(0).getRole();
+    }
+%>
 
 
 <head>
@@ -24,6 +31,9 @@
                 <li class="nav-item" role="presentation"><a class="nav-link active" href="index.jsp">Startside</a></li>
                 <% if(login == null){ %>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="login.jsp">login portal</a></li>
+                <%}%>
+                <% if (login != null && role == 1) { %>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="FrontController?source=admin">Admin</a></li>
                 <%}%>
                 <% if(login != null){ %>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="FrontController?source=profil">Kunde portal</a></li>
