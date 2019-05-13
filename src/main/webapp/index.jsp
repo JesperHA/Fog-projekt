@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/mathiasface.jpg">
+                        <div class="card clean-card text-center"><img class="card-img-top w-100 d-block" src="assets/img/mathiasface.jpg" style="width:253px!important;height:253px!important;">
                             <div class="card-body info">
                                 <h4 class="card-title">Mathias Gubben</h4>
                                 <p class="card-text">Programmør aka Lil' Brain</p>
