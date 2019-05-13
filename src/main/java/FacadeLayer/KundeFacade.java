@@ -1,6 +1,7 @@
 package FacadeLayer;
 
 import DBAccess.CustomerMapper;
+import Exceptions.LoginSampleException;
 import Model.Customer;
 
 import java.util.ArrayList;
@@ -15,4 +16,5 @@ public class KundeFacade {
 //        }
         return customerList;
     }
+
 }

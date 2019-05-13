@@ -21,7 +21,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">Konto</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Her kan du se dine kontooplysninger</h6>
+                            <h6 class="text-muted card-subtitle mb-2">Her kan du se admin funktioner</h6>
                             <hr>
                             <div class="row">
                                 <div class="col"><label class="col-form-label"><b>Kundenummer: </b><%out.println(customer.get(0).getCustomer_id());%></label></div>

@@ -2,6 +2,7 @@ package PresentationLayer;
 
 import FunctionLayer.Authentication;
 import Exceptions.LoginSampleException;
+import Model.Customer;
 import Model.User;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,17 +12,19 @@ public class Register extends Command {
 
     @Override
     String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException {
-        String email = request.getParameter( "email" );
-        String password1 = request.getParameter( "password1" );
-        String password2 = request.getParameter( "password2" );
-        if ( password1.equals( password2 ) ) {
-            User user = Authentication.createUser( email, password1 );
-            HttpSession session = request.getSession();
-            session.setAttribute( "user", user );
-            return "";
-        } else {
-            throw new LoginSampleException( "the two passwords did not match" );
-        }
+        String name = request.getParameter("name");
+        String email = request.getParameter( "email");
+        String password = request.getParameter( "password");
+        String phone = request.getParameter("phone");
+        String address = request.getParameter("address");
+        String postnr = request.getParameter("postnr");
+        String by = request.getParameter("by");
+
+        Customer customer = Authentication.createCustomer( name, email, password, phone, address, postnr, by);
+
+        HttpSession session = request.getSession();
+        session.setAttribute( "user", customer );
+        return "";
     }
 
 }

@@ -2,6 +2,7 @@ package PresentationLayer;
 
 import FunctionLayer.Authentication;
 import Exceptions.LoginSampleException;
+import Model.Customer;
 import Model.User;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,9 +19,11 @@ public class Login extends Command {
     String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException {
         String email = request.getParameter( "email" );
         String password = request.getParameter( "password" );
-        User user = Authentication.login( email, password );
+
+        Customer customer = Authentication.login( email, password );
+
         HttpSession session = request.getSession();
-        session.setAttribute( "user", user );
+        session.setAttribute( "user", customer );
         return "page";
     }
 

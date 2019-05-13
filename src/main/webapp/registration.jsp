@@ -7,9 +7,9 @@
                     <p>Velkommen til kundeportalen</p>
                 </div>
                 <form action="FrontController" method="post">
-                    <input type="hidden" name="source" value="Registrér dig"/>
-                    <div class="form-group"><label for="navn">Navn</label>
-                        <input class="form-control item" type="text" name="navn" id="navn">
+                    <input type="hidden" name="source" value="register"/>
+                    <div class="form-group"><label for="name">Navn</label>
+                        <input class="form-control item" type="text" name="name" id="name">
                     </div>
                     <div class="form-group"><label for="email">Email</label>
                         <input class="form-control item" type="email" name="email" id="email">
@@ -17,8 +17,11 @@
                     <div class="form-group"><label for="password">Adgangskode</label>
                         <input class="form-control" type="password" name="password" id="password">
                     </div>
-                    <div class="form-group"><label for="adress">Adresse</label>
-                        <input class="form-control item" type="text" name="adress" id="adress">
+                    <div class="form-group"><label for="phone">Phone</label>
+                        <input class="form-control item" type="text" name="phone" id="phone">
+                    </div>
+                    <div class="form-group"><label for="address">Adresse</label>
+                        <input class="form-control item" type="text" name="address" id="address">
                     </div>
                     <div class="form-group"><label for="postnr">Post nr.</label>
                         <input class="form-control item" type="text" name="postnr" id="postnr">
@@ -26,7 +29,7 @@
                     <div class="form-group"><label for="by">By</label>
                         <input class="form-control item" type="text" name="by" id="by" readonly>
                     </div>
-                    <button class="btn btn-primary btn-block" type="submit">Registrér</button>
+                    <button class="btn btn-primary btn-block" name="register" type="submit">Registrér</button>
 
                     <div class="block-heading" style="padding-top:25px; margin-bottom:0 !important;">
                         <a href="login.jsp" style="text-align:center;">Allerede bruger? Login her</a>
