@@ -5,6 +5,7 @@
  */
 package PresentationLayer;
 
+import DBAccess.CustomerMapper;
 import Exceptions.LoginSampleException;
 import Model.Customer;
 import Model.User;
@@ -119,7 +120,6 @@ public class FrontController extends HttpServlet {
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
 
-
                 for (int i = 0; i < customerList.size(); i++) {
                     if(customerList.get(i).getEmail().equals(email) && customerList.get(i).getPassword().equals(password)){
 
@@ -129,14 +129,37 @@ public class FrontController extends HttpServlet {
                         String address = customerList.get(i).getAdress();
                         String zipcode = customerList.get(i).getZipcode();
                         String city = customerList.get(i).getCity();
-
-                        customer.add(new Customer(customer_id, name, email, password, phone, address, zipcode, city));
+                        int role = customerList.get(i).getRole();
+                        customer.add(new Customer(customer_id, name, email, password, phone, address, zipcode, city, role));
                         session.setAttribute("login", customer);
                     }
 
                 }
 
                 destination = "/WEB-INF/brugerside.jsp";
+                break;
+
+            case "register":
+
+                System.out.println("Opretter kunden ...");
+
+                String customer_name = request.getParameter("name");
+                String customer_email = request.getParameter("email");
+                String customer_password = request.getParameter("password");
+                String customer_phone = request.getParameter("phone");
+                String customer_address = request.getParameter("address");
+                String customer_zipcode = request.getParameter("postnr");
+                String customer_city = request.getParameter("by");
+
+                Customer createCustomer = new Customer(customer_name, customer_email, customer_password, customer_phone, customer_address, customer_zipcode, customer_city, 0);
+
+                try {
+                    CustomerMapper.createCustomer(createCustomer);
+                    System.out.println("Kunden er oprettet!");
+                } catch (LoginSampleException ex) {
+                    ex.printStackTrace();
+                }
+
                 break;
 
         }
